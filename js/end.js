@@ -16,9 +16,9 @@ username.addEventListener('keyup', () => {
 saveHighScore = e => {
     console.log("clicked the save button");
     e.preventDefault();
-
+    const userId = highScores.length == 0 ? highScores.length : highScores[0].id + 1;
     const score = {
-        id: highScores[0].id + 1,
+        id: userId,
         score: mostRecentScore,
         name: username.value
     };
